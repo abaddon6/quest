@@ -1,0 +1,7 @@
+{"properties": [
+  {
+    "name": "server.time-zone",
+    "type": "java.lang.String",
+    "description": "Server Time Zone"
+  }
+]}
