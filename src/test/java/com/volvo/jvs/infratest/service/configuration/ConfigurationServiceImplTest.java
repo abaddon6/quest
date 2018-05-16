@@ -4,12 +4,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
-import com.volvo.jvs.quest.service.configuration.ConfigurationService;
-import com.volvo.jvs.quest.service.configuration.ConfigurationServiceImpl;
+import com.volvo.jvs.quest.configuration.QuestConfiguration;
 
 @RunWith(SpringRunner.class)
 public class ConfigurationServiceImplTest {
@@ -18,12 +16,10 @@ public class ConfigurationServiceImplTest {
 	private CorsRegistry corsRegisrty;
 	
 	@InjectMocks
-	private ConfigurationService configurationService = new ConfigurationServiceImpl();
+	private QuestConfiguration questConfiguration = new QuestConfiguration();
 	
 	@Test
-	public void addCorsMappings() {
-		configurationService.addCorsMappings(corsRegisrty);
+	public void webSecurityConfigurer() {
 		
-		Mockito.verify(corsRegisrty).addMapping("/**");
-	}
+	}	
 }

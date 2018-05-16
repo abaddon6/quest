@@ -2,3 +2,7 @@ server:
   port: 8080
   context-path: /quest
   time-zone: "GMT+1"
+spring:
+  mail:
+    host: mailgot.it.volvo.net
+    from: quest@volvo.com

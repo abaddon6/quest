@@ -3,5 +3,10 @@
     "name": "server.time-zone",
     "type": "java.lang.String",
     "description": "Server Time Zone"
+  },
+  {
+    "name": "spring.mail.from",
+    "type": "java.lang.String",
+    "description": "e-mail address from which e-mail will be send"
   }
 ]}
