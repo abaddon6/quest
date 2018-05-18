@@ -22,7 +22,7 @@ public class SurveyManagerController extends GenericController{
 	public Object addSurvey() {
 		StringBuilder surveys = new StringBuilder();
 		for(Survey survey : getSurveyRepository().findAll()) {
-			surveys.append(survey.getId()).append(" - ").append(survey.getName()).append("; ");
+			surveys.append(survey.getSurveyId()).append(" - ").append(survey.getName()).append("; ");
 		}
 		return Collections.singletonMap("response", "Administrator surveys: " + surveys.toString());  
 	}
