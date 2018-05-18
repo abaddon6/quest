@@ -1,4 +1,4 @@
-package com.volvo.jvs.quest.utils.datetime;
+package com.volvo.jvs.quest.util.datetime;
 
 import java.util.Date;
 

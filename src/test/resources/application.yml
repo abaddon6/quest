@@ -6,20 +6,15 @@ server:
 spring:
   profiles:
     active:
-    - dev
+    - junit
     
 ---
 spring:
-  profiles: dev
+  profiles: junit
   mail:
     host: mailgot.it.volvo.net
-    from: quest-dev@volvo.com
-  datasource:
-    url: jdbc:postgresql://localhost:5432/questdb 
-    username: postgres
-    password: admin   
+    from: quest-junit@volvo.com
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: none
-      

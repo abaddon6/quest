@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Validated
 @PropertySource("classpath:/messages.properties")
+@ResponseStatus(HttpStatus.OK)
 public class GenericController {
 
 	@Autowired

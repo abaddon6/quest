@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"> 
+  
+    <changeSet id="0.1.0.001" author="bplc904">
+        <createTable tableName="survey">
+            <column name="surveyid" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>       
+        </createTable>
+        <addPrimaryKey columnNames="surveyid" constraintName="survey_pk" tableName="survey"/>       
+    </changeSet>
+    
+    <!-- for release only -->
+    <!-- 
+    <changeSet id="0.1.0.999" author="bplc904">
+        <tagDatabase tag="0.1.0"/>
+    </changeSet>
+    -->
+</databaseChangeLog>
