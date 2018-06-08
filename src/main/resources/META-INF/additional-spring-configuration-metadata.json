@@ -8,5 +8,25 @@
     "name": "spring.mail.from",
     "type": "java.lang.String",
     "description": "e-mail address from which e-mail will be send"
+  },
+  {
+    "name": "spring.security.secret",
+    "type": "java.lang.String",
+    "description": "Secret for generating JWT tokens"
+  },
+  {
+    "name": "spring.security.expiration-time",
+    "type": "java.lang.Long",
+    "description": "JWT token expiration time in miliseconds"
+  },
+  {
+    "name": "spring.security.token-prefix",
+    "type": "java.lang.String",
+    "description": "JWT token prefix"
+  },
+  {
+    "name": "spring.security.header-string",
+    "type": "java.lang.String",
+    "description": "JWT token header"
   }
 ]}

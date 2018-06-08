@@ -1,4 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset>
-    <survey surveyId="0987654321" name="DEV-OPS Self Assesment Next Generation" />
+    <survey survey_id="0987654321" name="DEV-OPS Self Assesment Next Generation" publish="false" />
 </dataset>

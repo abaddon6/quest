@@ -29,6 +29,7 @@
 		<!-- libraries versions -->
 		<json.webtoken.version>0.9.0</json.webtoken.version>
 		<hibernate.validator.version>6.0.9.Final</hibernate.validator.version>
+		<guava.version>25.1-jre</guava.version>
 
 		<!-- test libraries versions -->
 		<dbunit.version>2.5.4</dbunit.version>
@@ -86,6 +87,14 @@
 			<groupId>org.liquibase</groupId>
 			<artifactId>liquibase-core</artifactId>
 		</dependency>
+		
+		<!-- Utils -->
+		<dependency>
+		    <groupId>com.google.guava</groupId>
+		    <artifactId>guava</artifactId>
+		    <version>${guava.version}</version>
+		</dependency>
+		
 
 		<!-- Test -->
 		<dependency>

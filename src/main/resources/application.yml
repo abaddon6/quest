@@ -11,9 +11,11 @@ spring:
 ---
 spring:
   profiles: dev
+  
   mail:
     host: mailgot.it.volvo.net
     from: quest-dev@volvo.com
+    
   datasource:
     url: jdbc:postgresql://localhost:5432/questdb 
     username: postgres
@@ -23,3 +25,15 @@ spring:
     hibernate:
       ddl-auto: none
       
+  jackson:
+    mapper:
+      default-view-inclusion: true
+    serialization:      
+      indent-output: true
+  
+  security:
+    secret: v6LfeGsZc77-_k7E02NZeygxWFyoGoFvw5_punoteV-Q9_M-v7HmlthVru-D_5wKR5x-lELKaIBGC59e6_xCoA
+    expiration-time: 86400000
+    token-prefix: 'Bearer '
+    header-string: Authorization
+ 

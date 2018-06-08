@@ -3,6 +3,7 @@ package com.volvo.jvs.quest.rest;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,9 +17,12 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @RestController
 public class AuthenticationController extends GenericController{
 
-	public static final String SECRET = "SecretKeyToGenJWTs";
-    public static final long EXPIRATION_TIME = 60_000; // 60 sec.
-    
+	@Value("${spring.security.expiration-time}")
+    public long expirationTime;
+	
+	@Value("${spring.security.secret}")
+    private String secret;
+	
 	@Autowired
 	private EmailService emailService;
 	
@@ -26,8 +30,8 @@ public class AuthenticationController extends GenericController{
 	public String authenticationRequest(@RequestParam String emailAddress) {
 		String token = Jwts.builder()
                 .setSubject(emailAddress)
-                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .signWith(SignatureAlgorithm.HS512, SECRET.getBytes())
+                .setExpiration(new Date(System.currentTimeMillis() + getExpirationTime()))
+                .signWith(SignatureAlgorithm.HS512, getSecret().getBytes())
                 .compact();
 		getEmailService().sendSimpleMessage(emailAddress, "Quest application - token test", "http://localhost:3000/admin/?token="+token);
 		return "Send"; 
@@ -35,5 +39,13 @@ public class AuthenticationController extends GenericController{
 
 	protected EmailService getEmailService() {
 		return emailService;
+	}
+
+	protected long getExpirationTime() {
+		return expirationTime;
+	}
+
+	protected String getSecret() {
+		return secret;
 	}
 }
