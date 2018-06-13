@@ -4,7 +4,7 @@ VOLUME /tmp
 
 User root
 RUN mkdir data
-COPY ./target/quest.war /data/app.war
+COPY target/quest.war /data/app.war
 
 RUN chmod -R +x /data/
 RUN chmod -R g+rwX /data/
