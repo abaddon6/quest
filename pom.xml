@@ -161,14 +161,14 @@
 			<uniqueVersion>false</uniqueVersion>
 			<id>maven2.it.volvo.net</id>
 			<name>ADT Java EE Maven repository</name>
-			<url>http://maven2.it.volvo.net/content/repositories/adtjavaee</url>
+			<url>https://maven2.it.volvo.net/content/repositories/adtjavaee</url>
 			<layout>default</layout>
 		</repository>
 		<snapshotRepository>
 			<uniqueVersion>false</uniqueVersion>
 			<id>maven2.it.volvo.net</id>
 			<name>ADT Java EE Maven Snapshot repository Snapshot</name>
-			<url>http://maven2.it.volvo.net/content/repositories/adtjavaeeSnapshots</url>
+			<url>https://maven2.it.volvo.net/content/repositories/adtjavaeeSnapshots</url>
 			<layout>default</layout>
 		</snapshotRepository>
 	</distributionManagement>
